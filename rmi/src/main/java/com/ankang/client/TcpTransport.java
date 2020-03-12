@@ -7,19 +7,18 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 public class TcpTransport {
-    private String host;
-    private int port;
+    private String serviceAddress;
 
-    public TcpTransport(String host, int port) {
-        this.host = host;
-        this.port = port;
+    public TcpTransport(String serviceAddress) {
+        this.serviceAddress = serviceAddress;
     }
 
     private Socket newSocket(){
         System.out.println("建立一个新的连接");
         Socket socket = null;
         try {
-            socket = new Socket(host,port);
+            String[] split = serviceAddress.split(":");
+            socket = new Socket(split[0],Integer.parseInt(split[1]));
 
         } catch (IOException e) {
             System.out.println("建立连接失败");

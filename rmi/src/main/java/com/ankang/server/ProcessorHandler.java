@@ -1,6 +1,7 @@
 package com.ankang.server;
 
 import com.ankang.client.RpcRequest;
+import com.ankang.server.zk.IRegisterCenter;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -8,14 +9,18 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ProcessorHandler implements Runnable{
     private Socket socket;
-    private Object service;
 
-    public ProcessorHandler(Socket socket, Object service) {
+    //存放服务名称和服务对象之间的关系
+    private Map<String,Object> handlerMap;
+
+    public ProcessorHandler(Socket socket, Map<String,Object> handlerMap) {
         this.socket = socket;
-        this.service = service;
+        this.handlerMap = handlerMap;
     }
 
     public void run() {
@@ -43,6 +48,7 @@ public class ProcessorHandler implements Runnable{
         for (int i=0;i<args.length;i++) {
             types[i] = args[i].getClass();
         }
+        Object service = handlerMap.get(rpcRequest.getClassName());
         Method method = service.getClass().getMethod(rpcRequest.getMethodName(), types);
         return method.invoke(service,args);
         
