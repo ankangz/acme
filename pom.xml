@@ -13,6 +13,7 @@
         <module>rmi</module>
         <module>serialize</module>
         <module>zookeeper</module>
+        <module>dubbo</module>
     </modules>
 
 </project>
