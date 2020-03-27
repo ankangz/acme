@@ -41,12 +41,27 @@
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.8</version>
+            <version>3.4.14</version>
         </dependency>
         <dependency>
             <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
             <version>0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ankang.acme</groupId>
+            <artifactId>OracleDriver</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ankang.acme</groupId>
+            <artifactId>mysqlDriver</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
         </dependency>
     </dependencies>
 
