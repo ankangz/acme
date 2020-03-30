@@ -48,6 +48,11 @@
             <artifactId>zkclient</artifactId>
             <version>0.10</version>
         </dependency>
+        <dependency>
+            <groupId>com.ankang.acme</groupId>
+            <artifactId>dubbo-spi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

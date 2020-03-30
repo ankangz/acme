@@ -3,24 +3,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dubbo</artifactId>
+        <artifactId>spi</artifactId>
         <groupId>com.ankang.acme</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spi</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>dubbo-spi</artifactId>
 
-    <name>spi</name>
+    <name>dubbo-spi</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <modules>
-        <module>DataBaseDriver</module>
-        <module>mysqlDriver</module>
-        <module>OracleDriver</module>
-        <module>dubbo-spi</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,6 +27,11 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.8</version>
         </dependency>
     </dependencies>
 

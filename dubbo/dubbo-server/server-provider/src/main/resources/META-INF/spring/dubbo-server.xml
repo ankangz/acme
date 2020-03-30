@@ -13,7 +13,7 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <dubbo:service interface="com.ankang.acme.IHelloService" ref="HelloService" version="0.0.1"/>
-    <dubbo:service interface="com.ankang.acme.IHelloService" ref="HelloService2" version="0.0.2" timeout="100"/>
+    <dubbo:service interface="com.ankang.acme.IHelloService" ref="HelloService2" version="0.0.2" />
 
     <bean id="HelloService" class="com.ankang.acme.HelloServiceImpl"/>
     <bean id="HelloService2" class="com.ankang.acme.HelloServiceImpl2"/>

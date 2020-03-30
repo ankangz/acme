@@ -13,7 +13,6 @@
 
 
     <dubbo:reference interface="com.ankang.acme.IHelloService" id="HelloService" version="0.0.1"
-    mock="com.ankang.acme.TestMock" timeout="1"
     />
 
 
