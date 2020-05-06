@@ -34,9 +34,9 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
+            <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
-            <version>2.5.3</version>
+            <version>2.7.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
@@ -64,10 +64,23 @@
             <version>5.1.46</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>4.0.1</version>
+            <type>bundle</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.0.1</version>
+            <type>bundle</type>
+        </dependency>
+        <!--<dependency>
             <groupId>com.ankang.acme</groupId>
             <artifactId>dubbo-spi</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>
