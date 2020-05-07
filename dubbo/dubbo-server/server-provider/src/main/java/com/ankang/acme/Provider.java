@@ -1,10 +1,5 @@
 package com.ankang.acme;
 
-import org.apache.dubbo.common.extension.ExtensionLoader;
-import org.apache.dubbo.registry.RegistryFactory;
-import org.apache.dubbo.remoting.Transporter;
-import org.apache.dubbo.remoting.zookeeper.ZookeeperTransporter;
-import org.apache.dubbo.rpc.ProxyFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
