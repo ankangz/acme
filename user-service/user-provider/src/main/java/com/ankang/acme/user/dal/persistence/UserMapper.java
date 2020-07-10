@@ -5,9 +5,9 @@ import com.ankang.acme.user.dal.entity.User;
 public interface UserMapper {
     /**
      * 
-     * @param user
+     * @param userName
      * @return
      */
-    User getUserByUserName(User user);
+    User getUserByUserName(String userName);
     
 }

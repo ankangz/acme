@@ -15,6 +15,7 @@
         <module>zookeeper</module>
         <module>dubbo</module>
         <module>user-service</module>
+        <module>gpmall-sso</module>
     </modules>
 
 </project>
