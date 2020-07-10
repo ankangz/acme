@@ -14,6 +14,7 @@
         <module>serialize</module>
         <module>zookeeper</module>
         <module>dubbo</module>
+        <module>user-service</module>
     </modules>
 
 </project>
