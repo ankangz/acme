@@ -8,7 +8,7 @@ $(function(){
         }
         $("#password").val(MD5(password));
         $.ajax({
-            url:"/login",
+            url:"login",
             type:"POST",
             data:{username:username,password:$("#password").val()},
             success:function(data){

@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+
 @Service("userCoreService")
 public class UserCoreServiceImpl implements IUserCoreService {
     
@@ -40,6 +42,7 @@ public class UserCoreServiceImpl implements IUserCoreService {
                 response.setMobile(user.getMobile());
             }
         } catch (Exception e) {
+            System.out.println(e);
             ServiceException serviceException = (ServiceException) ExceptionUtil.handlerException4biz(e);
             response.setCode(serviceException.getErrorCode());
             response.setMsg(serviceException.getErrorMessage());

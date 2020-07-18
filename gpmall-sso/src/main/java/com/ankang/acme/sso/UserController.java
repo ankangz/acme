@@ -15,11 +15,12 @@ public class UserController {
     IUserCoreService iUserCoreService;
     
     @PostMapping("/login")
-    public ResponseEntity doLogin(String userName,String password){
+    public ResponseEntity doLogin(String username,String password){
         UserLoginRequest request = new UserLoginRequest();
-        request.setUserName(userName);
+        request.setUserName(username);
         request.setPassword(password);
         UserLoginResponse response = iUserCoreService.login(request);
         return ResponseEntity.ok(response);
+        
     }
 }

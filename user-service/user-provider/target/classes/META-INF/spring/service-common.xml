@@ -34,7 +34,7 @@
 	<bean id="userSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="userDataSource" />
 		<property name="typeAliasesPackage"
-				  value="com.gupaoedu.user.dal.entity" />
+				  value="com.ankang.acme.user.dal.entity" />
 		<property name="mapperLocations" value="classpath*:com/ankang/acme/user/dal/persistence/*Mapper.xml" />
 	</bean>
 
