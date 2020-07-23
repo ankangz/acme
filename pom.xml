@@ -16,6 +16,7 @@
         <module>dubbo</module>
         <module>user-service</module>
         <module>gpmall-sso</module>
+        <module>session-demo</module>
     </modules>
 
 </project>
