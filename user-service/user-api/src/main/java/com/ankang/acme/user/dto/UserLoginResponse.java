@@ -8,6 +8,15 @@ public class UserLoginResponse extends AbstractResponse {
     private Integer uid;
     private String avatar;
     private String mobile;
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public Integer getUid() {
         return uid;
@@ -31,5 +40,15 @@ public class UserLoginResponse extends AbstractResponse {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+
+    @Override
+    public String toString() {
+        return "UserLoginResponse{" +
+                "uid=" + uid +
+                ", avatar='" + avatar + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", token='" + token + '\'' +
+                '}';
     }
 }
