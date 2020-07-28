@@ -17,7 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <spring.version>5.2.7.RELEASE</spring.version>
+    <spring.version>5.0.4.RELEASE</spring.version>
   </properties>
 
   <dependencies>
@@ -44,19 +44,10 @@
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
+      <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+    
     <!--spring 依赖包-->
     <!-- Spring 升级4+ 依赖的JSON包 -->
     <dependency>
@@ -95,6 +86,7 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
@@ -102,13 +94,13 @@
       <version>2.2</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+  
+    <!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-data-redis -->
     <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-redis</artifactId>
-      <version>2.3.2.RELEASE</version>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-redis</artifactId>
+      <version>2.0.4.RELEASE</version>
     </dependency>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
