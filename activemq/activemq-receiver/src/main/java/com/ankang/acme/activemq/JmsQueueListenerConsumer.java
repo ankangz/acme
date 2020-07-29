@@ -4,7 +4,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class JmsQueueConsumer {
+public class JmsQueueListenerConsumer {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory =
                 new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
@@ -18,10 +18,26 @@ public class JmsQueueConsumer {
             Destination destination = session.createQueue("myQueue");
             MessageConsumer consumer = session.createConsumer(destination);
 
-            TextMessage receive = (TextMessage)consumer.receive();
+            MessageListener listener = new MessageListener() {
+                @Override
+                public void onMessage(Message message) {
+                    try {
+                        System.out.println(((TextMessage)message).getText());
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+
+            /*TextMessage receive = (TextMessage)consumer.receive();
             System.out.println(receive.getText());
             session.commit();
-            session.close();
+            session.close();*/
+
+            while (true){
+                consumer.setMessageListener(listener);
+                session.commit();
+            }
 
         } catch (JMSException e) {
             e.printStackTrace();

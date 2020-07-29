@@ -4,7 +4,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class JmsQueueProducer {
+public class JmsQueueConsumer {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory =
                 new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
@@ -16,10 +16,10 @@ public class JmsQueueProducer {
 
             Session session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createQueue("myQueue");
-            MessageProducer producer = session.createProducer(destination);
-            TextMessage hello_myQueue = session.createTextMessage("Hello myQueue");
+            MessageConsumer consumer = session.createConsumer(destination);
 
-            producer.send(hello_myQueue);
+            TextMessage receive = (TextMessage)consumer.receive();
+            System.out.println(receive.getText());
             session.commit();
             session.close();
 

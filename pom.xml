@@ -17,6 +17,7 @@
         <module>user-service</module>
         <module>gpmall-sso</module>
         <module>session-demo</module>
+        <module>activemq</module>
     </modules>
 
 </project>
