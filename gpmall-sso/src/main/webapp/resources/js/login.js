@@ -13,7 +13,7 @@ $(function(){
             data:{username:username,password:$("#password").val()},
             success:function(data){
                 if(data.code=="000000"){
-                    window.location.href=data.data;
+                    alert(data.msg);
                 }else{
                     alert(data.msg);
                 }

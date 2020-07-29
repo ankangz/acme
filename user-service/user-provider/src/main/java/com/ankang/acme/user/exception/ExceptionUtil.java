@@ -4,7 +4,7 @@ package com.ankang.acme.user.exception;
 
 import com.alibaba.dubbo.common.logger.Logger;
 import com.alibaba.dubbo.common.logger.LoggerFactory;
-import com.ankang.acme.user.ResponseCodeEnum;
+import com.ankang.acme.user.constants.ResponseCodeEnum;
 
 public class ExceptionUtil{
 

@@ -1,7 +1,7 @@
 package com.ankang.acme.user.exception;
 
 
-import com.ankang.acme.user.ResponseCodeEnum;
+import com.ankang.acme.user.constants.ResponseCodeEnum;
 
 /**
  * Create by qingyin@wacai.com

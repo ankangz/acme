@@ -15,14 +15,14 @@
     </context:component-scan>
     
     
-   <!-- <mvc:interceptors>
+   <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/resources/**"/>
             <mvc:exclude-mapping path="/pages/**"/>
             <bean class="com.ankang.acme.sso.intercept.TokenIntercepter"/>
         </mvc:interceptor>
-    </mvc:interceptors>-->
+    </mvc:interceptors>
     
     <mvc:default-servlet-handler />
     <!-- 启用spring mvc 注解 -->
