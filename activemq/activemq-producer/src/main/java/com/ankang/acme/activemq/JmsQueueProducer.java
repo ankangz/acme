@@ -17,7 +17,11 @@ public class JmsQueueProducer {
             Session session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createQueue("myQueue");
             MessageProducer producer = session.createProducer(destination);
+            
             TextMessage hello_myQueue = session.createTextMessage("Hello myQueue");
+            //设置属性
+            hello_myQueue.setStringProperty("key","value");
+            
 
             producer.send(hello_myQueue);
             session.commit();
